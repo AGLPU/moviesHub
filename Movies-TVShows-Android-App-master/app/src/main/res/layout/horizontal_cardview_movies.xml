@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootCV"
+    android:layout_width="140dp"
+    android:layout_height="280dp"
+    android:elevation="2dp"
+    app:cardCornerRadius="2dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#666666">
+
+        <ImageView
+            android:id="@+id/thumbnailIV"
+            android:layout_width="match_parent"
+            android:layout_height="196dp"
+            android:scaleType="fitXY"
+            android:transitionName="posterImageTransition" />
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thumbnailIV"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/proximanova_semibold_webfont"
+            android:gravity="left"
+            android:maxLines="2"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/releaseDateTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTV"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/proximanova_regular_webfont"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/ratingTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:drawableRight="@drawable/ic_star"
+            android:drawablePadding="3dp"
+            android:fontFamily="@font/proximanova_regular_webfont"
+            android:paddingLeft="4dp"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

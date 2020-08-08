@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activityMainFrameLayout"
+    android:layout_width="match_parent"
+
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="aman.bramdehart.moviesL.MainActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/mainTL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@android:color/white" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/containerVP"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/translucentV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#85000000"
+                android:clickable="false"
+                android:visibility="gone" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/searchMovieFabButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="90dp"
+                android:elevation="6dp"
+                android:src="@drawable/fab_movie_search"
+                android:visibility="invisible"
+                app:fabSize="normal"
+                app:pressedTranslationZ="12dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/searchTvShowFabButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="160dp"
+                android:elevation="6dp"
+                android:src="@drawable/fab_tvshow_search"
+                android:visibility="invisible"
+                app:fabSize="normal"
+                app:pressedTranslationZ="12dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/searchFAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:elevation="6dp"
+                android:src="@drawable/fab_search"
+                app:fabSize="normal"
+                app:pressedTranslationZ="12dp" />
+
+            <LinearLayout
+               android:id="@+id/banner_container"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+
+                android:layout_marginTop="50dp">
+            </LinearLayout>
+            <TextView
+                android:id="@+id/searchMovieTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginRight="85dp"
+                android:layout_marginBottom="98dp"
+                android:background="@drawable/text_view_border"
+                android:elevation="6dp"
+                android:fontFamily="@font/proximanova_semibold_webfont"
+                android:text="Movies"
+                android:textColor="@color/text1"
+                android:textSize="15dp"
+                android:visibility="invisible" />
+
+
+            <TextView
+                android:id="@+id/searchShowTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginRight="85dp"
+                android:layout_marginBottom="168dp"
+                android:fontFamily="@font/proximanova_semibold_webfont"
+                android:background="@drawable/text_view_border"
+                android:elevation="6dp"
+                android:text="TVShows"
+                android:textColor="@color/text1"
+                android:visibility="invisible" />
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>
+

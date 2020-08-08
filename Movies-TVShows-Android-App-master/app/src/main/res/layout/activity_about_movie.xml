@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+
+    android:background="@color/colorPrimary"
+    tools:context="aman.bramdehart.moviesL.AboutMovieActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@color/colorPrimary"
+                    app:layout_scrollFlags="scroll" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/posterWithBannerImageView"
+                    android:layout_width="100dp"
+                    android:layout_height="155dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="230dp"
+                    android:layout_marginBottom="15dp"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="fitXY"
+                    android:transitionName="posterImageTransition"
+                    app:layout_scrollFlags="scroll" />
+
+                <TextView
+                    android:id="@+id/releaseDateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="264dp"
+                    android:layout_toRightOf="@+id/posterWithBannerImageView"
+                    android:drawableLeft="@drawable/ic_dot_single"
+                    android:fontFamily="@font/proximanova_regular_webfont"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/runTimeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/releaseDateTextView"
+                    android:layout_toRightOf="@+id/releaseDateTextView"
+                    android:drawableLeft="@drawable/ic_dot_single"
+                    android:fontFamily="@font/proximanova_regular_webfont"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/nameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/releaseDateTextView"
+                    android:layout_alignStart="@+id/releaseDateTextView"
+                    android:layout_alignLeft="@+id/releaseDateTextView"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/proximanova_semibold_webfont"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp"/>
+
+                <TextView
+                    android:id="@+id/genreTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nameTextView"
+                    android:layout_alignStart="@+id/nameTextView"
+                    android:layout_alignLeft="@+id/nameTextView"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/proximanova_regular_webfont"
+                    android:textColor="@android:color/white" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="enterAlways"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+           <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:id="@+id/banner_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="@dimen/fab_margin"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </androidx.viewpager.widget.ViewPager>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

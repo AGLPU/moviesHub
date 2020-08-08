@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvShowTypeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toStartOf="@+id/seeAllTextView"
+        android:fontFamily="@font/proximanova_semibold_webfont"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/seeAllTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvShowTypeTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/proximanova_regular_webfont"
+        android:padding="8dp"
+        android:textColor="@color/subtext1" />
+
+
+    <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/activityMainRecyclerViewHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvShowTypeTextView"
+        android:layout_marginBottom="18dp"
+        android:orientation="horizontal" />
+
+</RelativeLayout>
+
